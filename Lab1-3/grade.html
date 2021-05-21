@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Grade</title>
+    <link href="grade.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+    <form action="http://mumstudents.org/params.php" method="POST">
+        <fieldset>
+            <legend> <h1>Retrieve your grade</h1></legend>
+   
+
+     <label>Name: <input type="text" id="name" name="name" size="16"/></label> <br/>
+    <label>Student ID: <input type="id" id="id" name="id" maxlength="6"/></label> <br/>
+    <label >assignment  </label>
+     <select name="assignment" id="assignment" >
+        <option  > Lab1 </option>
+        <option >Lab2 </option>
+        <option >Lab3</option>
+        <option >Lab4</option>
+
+    </select> </br>
+   Entry: 
+    <input type="radio" name="entry" value="FEB" checked/> FEB
+    <input type="radio" name="entry" value="MAY"/> MAY
+    <input type="radio" name="entry" value="AUGUST"/> AUGUST
+
+    <br/>
+
+    Confirm that you are looking for your own grade?
+    <input type="checkbox"  name="security"> Yes
+    <input type="checkbox"  name="security"> No
+    <br/>
+    <input type="submit" value="Get Grade!">
+</fieldset>
+    </form>
+
+    <div class="footer">
+    <a class="a" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fselamwoldu.github.io%2FMyFirstRepo%2Fgrade.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+    </a>
+    <a class="a" href="https://validator.w3.org/check?uri=https%3A%2F%2Fselamwoldu.github.io%2FMyFirstRepo%2Fgrade.html&charset=%28detect+automatically%29&doctype=Inline&group=0">
+        <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="html validator">
+    </a>          
+</div>
+</body> 
+</html>
+
