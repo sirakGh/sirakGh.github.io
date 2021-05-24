@@ -7,11 +7,67 @@
     <title>Tip-Calculator</title>
     <script>
         function myCalculator(){
+           
             let x = parseInt(document.getElementById("subtotal").value);
             var y = parseInt(document.getElementById("tip").value);
             var z = x + x*(y/100);
             document.getElementById('total').innerHTML = "$ " + z; 
-                }
+            
+            // console.log( add(3, 4) );
+            // console.log( add.name);
+            
+            const sum = function(x, y){
+                return x + y;
+            }
+             console.log(1 === "1")
+            console.log(sum.name);
+           
+            // let callbacks = [];
+            
+            // for(var i =  0 ; i <= 2; i++){
+            //     callbacks[i] = function(){
+            //         return i * 2;
+            //     }
+                
+            // }
+            // // alert(i);
+            // console.log(callbacks[0]());
+            // console.log(callbacks[1]());
+            // console.log(callbacks[2]());
+            // console.log("1" == "1.0");
+
+            // console.log("hello" + " : " + !!"hello" );
+            // console.log("Empty String" + " : " + !!"" );
+            // console.log("null" + " : " + !!null);
+
+            const a  = [1,2,3];
+
+            // let funExp = function(start, elem){
+            //         return start + elem;
+            //     }
+
+            const b = a.map(x => x + 3);
+            
+
+            function sum1(){
+                return 5+5;
+            }
+
+            function secondSum(fun){
+                let z = 10;
+                return z + fun();
+            }
+            console.log(secondSum(sum1,34234,323,3232));
+            // const addition = sum1();
+            // console.log(typeof(addition));
+
+            // const addition1 = sum1;
+            // console.log(typeof(addition1))
+            // console.log(b);
+
+
+
+        }
     </script>
     <style>
         input{
