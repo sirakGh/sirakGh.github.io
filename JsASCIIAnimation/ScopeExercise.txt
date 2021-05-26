@@ -1,0 +1,129 @@
+Scope Exercise
+1. Determine what this Javascript code will print out (without running it):
+                x = 1;
+                var a = 5;
+                var b = 10;
+                var c = function(a, b, c) {
+                var x = 10;
+                document.write(x);  //i
+                document.write(a);  //ii
+                var f = function(a, b, c) {
+                        b = a;
+                        document.write(b);  //iii
+                        b = c;
+                        var x = 5;
+                    }
+                f(a,b,c);
+                document.write(b);  //iv
+             }
+            c(8,9,10);
+            document.write(b);
+            document.write(x);
+           
+Answers:
+
+            c(8,9,10);     -> 
+                                  10  
+                                  8  
+                                  8  
+                                  9             
+            document.write(b); -> 10
+            document.write(x); -> 1
+            
+2. What is the difference between a method and function?
+JavaScript Function	JavaScript Methods
+Block of codes that performs specific tasks	Property of an object that contains function definition
+Function can pass the data that is operaated and may returned the data	Method operates data that contained in a class
+Function can be called by its name	A method consists of a code that can be called by the name of its object and its method name using dot notation or square bracket notation..
+                        function fun(parameters) {
+                            // Content
+                        }
+                        fun(); // function call
+                    
+                            var student = {
+                                fullname : function() {
+                                    // Content
+                                }
+                            };
+                            
+                            student.fullname() // method call
+                        
+3.What does 'this' refer to when used in a Java method?
+
+This : refers to te current object in a method or in a constructor.
+
+4. What does 'this' refer to when used in a JavaScript method?
+
+This : it has different values depending on where it is used:
+IN METHOD: It refers to owner object
+ALONE: It refers to global object
+IN A FUCNTION: It refers to global object
+IN AN EVENT: It refers to the element that recieved the event.
+
+5.What does 'this' refer to when used in a JavaScript constructor function?
+
+The value of this, when used in an object, is the object itself.
+In a constructor function this does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created.
+
+6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'. When f is called by x.f( ), what does 'this' refer to?
+This - referes to X
+7.What is a free variable in JavaScript?
+Free Varaible: A vraible that refered to a function that neither it's parameters nor local variable
+There are lexical scope where a closure is created and free variale is used in javascript.
+
+8.Create an object that has properties with name = "fred" and major="music" and a property that is a function that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+                var aObj = {
+                    name : "fred",
+                    major: "music",
+                    smallestOfTwo: function(a,b){
+                        if(a>b){
+                            return b;
+                        }
+                        else if(a==b){
+                            return a*a;
+                        }
+                        else{
+                            return a;
+                        }
+                    }
+                
+                }
+            
+9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function. Employee objects have the following fields: name, salary, position.
+                function Employee(name, salary, position) {
+                    this.name = name;
+                    this.salary = salary;
+                    this.position = position;   
+                }
+                var emp1 = new Employee("Helu", 5000, "Software-Developer");
+                var emp2 = new Employee("Asli", 3000, "Junior-Developer");
+                var emp3 = new Employee("Ruti", 9000, "Manager");
+            
+10. Write a Javascript function that takes any number of input arguments and returns the product of the arguments.
+                function product(x, y, ...more) {
+                    var total = x * y;
+                    if (more.length > 0) {
+                      for (var i = 0; i < more.length; i++) {
+                        total *= more[i];
+                      }
+                    }
+                    return total;
+                  }
+            
+Another way:
+
+                function productOfArguments() {
+                    let i;
+                    let productResult = 1;
+                    for (i = 0; i < arguments.length; ++i) {
+                      productResult *= arguments[i];
+                    }
+                    return productResult;
+                }
+            
+11. Write an arrow function that returns the maximum of its three input arguments.
+                var maxOfThree = (a,b,c) =>{
+                    let max = Math.max(a,b);
+                    return Math.max(c,max);
+                }
+            
