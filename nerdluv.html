@@ -34,16 +34,20 @@
          <input type="radio" name="gender" value="Male"/> Male
          <input type="radio" name="gender" value="Female" checked/> Female   </br>
         <input type="text" id="age" name="age" size="6" maxlength="2"/> <br/>
+        <input type="submit" name="button"/><br>
 
          <input type="text" id="personality type" name="personality type" size="6" maxlength="4"/>
         <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp"> (Don't know your type?) </a> <br/>
           
        
         <select name="os" id="os" >
+            <optgroup label="group1">
             <option  selected> Windows </option>
+        </optgroup>
+        <optgroup label="group2">
             <option >Mac OS X</option>
             <option >Linux</option>
-
+        </optgroup>
         </select> </br>
 
         <input type="text" id="seeking age" name="seeking age" size="6" maxlength="2" placeholder="min" required/>

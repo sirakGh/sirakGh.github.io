@@ -26,57 +26,87 @@
                 var name = "Awetey"
                 function display(){
                     name = "sirak";
-                    alert (name);
+                    // alert (name);
 
                 }
                 display();
               
             }
-            init();
+          
+                 var added = (function () {
+                      var counter = 0;
+                        return function () {
+                           return counter += 1;
+                        }
+                    })();
+
+                    console.log("added"+ added()); 
+                    console.log("added" +added());
+                    console.log("added" +added());
+
+
             // let callbacks = [];
             
-            // for(var i =  0 ; i <= 2; i++){
+            // for(let i =  0 ; i <= 2; i++){
+                
             //     callbacks[i] = function(){
-            //         return i * 2;
+            //         return i;
             //     }
                 
             // }
-            // // alert(i);
+            // // // alert(i);
             // console.log(callbacks[0]());
             // console.log(callbacks[1]());
             // console.log(callbacks[2]());
-            // console.log("1" == "1.0");
+            
+            // // console.log("1" == "1.0");
 
-            // console.log("hello" + " : " + !!"hello" );
-            // console.log("Empty String" + " : " + !!"" );
-            // console.log("null" + " : " + !!null);
+            // // console.log("hello" + " : " + !!"hello" );
+            // // console.log("Empty String" + " : " + !!"" );
+            // // console.log("null" + " : " + !!null);
 
-            const a  = [1,2,3];
+            // const a  = [1,2,3];
 
-            // let funExp = function(start, elem){
-            //         return start + elem;
-            //     }
+            // // let funExp = function(start, elem){
+            // //         return start + elem;
+            // //     }
 
-            const b = a.map(x => x + 3);
+            // const b = a.map(x => x + 3);
             
 
-            function sum1(){
-                return 5+5;
+            // function sum1(){
+            //     return 5+5;
+            // }
+
+            // function secondSum(fun){
+            //     let z = 10;
+            //     return z + fun();
+            // }
+            // console.log(secondSum(sum1,34234,323,3232));
+            // // const addition = sum1();
+            // // console.log(typeof(addition));
+
+            // // const addition1 = sum1;
+            // // console.log(typeof(addition1))
+            // // console.log(b);
+
+            var pt ={
+                x: 4, y: 3,
+                distanceFromOrigin : function(){ 
+                    return Math.sqrt( pt.x * this.x + this.y * this.y);
+                }
+            };
+             function addCounter(){
+                var c = 0;
+                return c +=1;
             }
-
-            function secondSum(fun){
-                let z = 10;
-                return z + fun();
-            }
-            console.log(secondSum(sum1,34234,323,3232));
-            // const addition = sum1();
-            // console.log(typeof(addition));
-
-            // const addition1 = sum1;
-            // console.log(typeof(addition1))
-            // console.log(b);
-
-
+            console.log("add counter"+ addCounter());
+            
+            var pts = Object.create(pt);
+            pts.x = 10;
+            console.log(pts);
+            console.log(pt);
+            pt.__proto__
 
         }
     </script>
@@ -84,6 +114,10 @@
         input{
             margin-right: 20px;
             margin-bottom: 10px;
+        }
+        h1{
+            text-decoration: overline line-through underline;
+            font-style: italic;
         }
         label{
             font-size: 25px;
