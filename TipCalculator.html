@@ -44,6 +44,29 @@
                     console.log("added" +added());
                     console.log("added" +added());
 
+                    var foo = 1; 
+                    function bar() {  
+	                    if (!foo) {   
+	                	var foo = 10;  
+                    	}  
+	                      alert(foo); 
+                     } 
+                     console.log("Alert printed" + bar()); 
+                     console.log("2"*"3")
+                     console.log("2"+"3")
+                     console.log(!5)
+
+                     var foo = 1; 
+                       function bar() {  
+                        console.log("statment foo:"+foo);
+	                        if (!foo) {   
+                                console.log("If statment foo:"+foo);
+		                           var foo = 10;  
+	                               }  
+                                   
+	                           alert(foo); 
+                                } 
+                          console.log("Bar result of foo:"+bar());    
 
             // let callbacks = [];
             
