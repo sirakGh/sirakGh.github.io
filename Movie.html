@@ -6,6 +6,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<link href="movie.css" type="text/css" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="movie.css" /> -->
+		<script src="/w3-2_Puzzle/jquery.min.js"></script>
+	<script type="text/javascript">
+				var name = "Bruce Scheneier";
+			function execute(){
+
+				$.getJSON('/hero/' + name, function(data) {
+					for (var i = 0; i < data.length; i++) {
+						$('<li>').appendTo('#facts').text(data[i]);
+					}
+				});
+				
+				// $.get('/hero/',{
+				// 	name:"Chuck Norris"
+				// })					
+				// 	.done(
+				// 		function(data){
+				// 			$('#identity1').html(JSON.stringify(data));
+				// 		}
+				// 	).fail(
+				// 		function(xhr, status , exception){
+				// 			console.log ( "XHR", xhr, "Status", status, "Exception", exception);
+				// 			// $('#identity1').html(exception)
+				// 		}
+				// 	)
+				}
+		</script>
+
 	</head>
 
 	<body>		
@@ -20,9 +47,12 @@
 				</div>
 
 				<dl>
-					<dt>STARRING</dt>
+					<dt id="identity1">STARRING</dt>
 					<dd>Patrick Stewart <br> Mako <br> Sarah Michelle Gellar <br> Kevin Smith</dd>
 
+					<input type="button" id="btn1" onclick="execute()" value="click me"/>
+					
+					
 					<dt>DIRECTOR</dt>
 					<dd>Kevin Munroe</dd>
 
