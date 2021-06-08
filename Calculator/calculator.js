@@ -31,12 +31,13 @@ if (q.pathname=="/cal.js")
 }
  
 else
-fs.readFile(filename, function(err, data) { if (err) {
-res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end("404 Not Found");
+fs.readFile(filename, function(err, data) { 
+    if (err) {
+        res.writeHead(404, {'Content-Type': 'text/html'});
+        return res.end("404 Not Found");
     }
-res.writeHead(200); // Content-Type not included 
-res.write(data);
-return res.end();
-  });
+    res.writeHead(200); // Content-Type not included 
+    res.write(data);
+    return res.end();
+});
 }).listen(8080);
