@@ -7,7 +7,7 @@
     <title>Simple Calculator</title>
     <style>
          body{
-            background-color: rgb(197, 38, 171);
+            background-color: rgb(80, 55, 76);
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -28,8 +28,8 @@
     <form action = "http://localhost:8080/cal.js">
         <div>
             <span> Enter two numbers </span> <br/> 
-        <input type = "text" name="first"/><br/> 
-        <input type = "text" name="second"/><br/> 
+        <input type = "text" id = "first" name="first"/><br/> 
+        <input type = "text" id = "second" name="second"/><br/> 
 
 <select name="operation" id="operation">
 <option id="add" value="add">Add</option>
@@ -43,5 +43,6 @@
         
         </div>
         </form>
+        <link rel="stylesheet" href="calculator.css">
 </body>
 </html>
