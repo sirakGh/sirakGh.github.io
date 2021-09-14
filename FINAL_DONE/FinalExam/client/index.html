@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Savings Account</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <img src="./photos/bank-logo.jpg" alt="Bank">
+    <body style="background-color:rgb(177, 245, 100);"> ​
+    <h1>First Federal Savings Bank</h1>
+    <br>
+    <br>
+    <form action="http://localhost:5000/" method="POST">
+        <div>
+            <fieldset>
+                <legend>Savings Account Information</legend>
+                Name
+                <input type="text" name="user" id="name">
+                Account Number
+                <input type="text" name="account" id="number">
+                Amount
+                <input type="text" name="amount" id="balance">
+                Operation
+                <select name="operation" id="operation">
+                    <option value="deposit">deposit</option>
+                    <option value="withdraw">withdraw</option>
+                    <option value="balance">balance</option>
+                    <option value="new">new</option>
+                </select>
+            </fieldset>
+            <br>
+            <input id="btn" type="submit" value="Execute Operation" />
+            <input type="reset" value="Clear" >
+        </div>
+    </form>
+    <div id="result">
+        
+    </div>
+    <div>
+        <img src="photos/giphy.gif" alt="loader" id="loader">
+    </div>
+    <div id="result">
+
+    </div>
+</body>
+
+</html>
